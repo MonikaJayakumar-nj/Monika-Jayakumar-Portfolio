@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monika Jayakumar - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Scroll snapping container */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Disable default scrolling */
+            padding-top: 56px; /* Add padding to avoid content hiding behind the navbar */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure it stays above content */
+            background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+        }
+
+        .scroll-snap-wrapper {
+            scroll-snap-type: y mandatory; /* Enable vertical snapping */
+            overflow-y: scroll; /* Allow vertical scrolling */
+            height: 100vh; /* Full viewport height */
+            width: 100%; /* Ensure it takes the full width */
+            box-sizing: border-box; /* Include padding and borders in height and width calculations */
+        }
+
+        /* Individual sections */
+        .snap-section {
+            scroll-snap-align: start; /* Snap section to start */
+            min-height: 100vh; /* Allow section to grow dynamically if content overflows */
+            height: auto; /* Full viewport height for each section */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 100px 20px 20px;
+            padding-top: 100px; /* Adjust based on the height of the navbar */
+            box-sizing: border-box;
+            overflow-y: auto; /* Allows scrolling within the section if content overflows */
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">Personal Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Technical Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+
+    <!-- Wrapper for Sections -->
+    <div class="scroll-snap-wrapper">
+
+        <!-- Hero Section -->
+        <section id="hero" class="snap-section" style="
+            height: 100vh;
+            background-color: black;
+            background-image: url('img_video/MJ2.png');
+            background-size: contain; /* Ensures the photo fits within the section without cropping */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center; /* Centers the image */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        ">
+            <!-- Overlay for Hue Effect -->
+            <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay for hue */
+                z-index: 1; /* Ensures overlay is above the background */
+            "></div>
+            
+            <div class="container text-center" style="z-index: 2; position: relative; display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center; 
+            height: 100vh;">
+
+                <h1 style="
+                    font-size: 4rem; 
+                    font-weight: bold; 
+                    color: white; 
+                    margin-bottom: 35px;
+                ">Monika Jayakumar</h1>
+                <h3 style="
+                    font-size: 1.5rem; 
+                    color: #ccc; 
+                    max-width: 800px; 
+                    margin: 0 auto; /* Center text */
+                    line-height: 1.6; /* Improve readability */
+                    text-align: center; /* Ensure text is centered */
+                ">
+                    Passionate and motivated Machine Learning professional with hands-on experience 
+                    in AI, ML, Deep Learning, Data Science, Autonomous Vehicles, and Robotics. I specialize in developing intelligent systems for autonomous vehicles and solving real-world 
+                    problems. My dedication to learning new skills and innovation drives me to excel in research and technology.
+                </h3>
+            </div>
+        </section>
+    
+        <!-- About Me Section -->
+        <section id="about" class="snap-section">
+            <div class="container py-5">
+                <h2 class="text-center mb-4">About Me</h2>
+                
+                <!-- About Me Description -->
+                <div class="mb-4 text-center">
+                    <p>
+                        I’m a passionate computer science professional with a knack for solving real-world problems through AI, ML, robotics, and autonomous systems. 
+                        If it’s a robot, I’ve probably worked with it—or at least dreamt about it! From flying drones to ground robots, I’m all in when it comes to innovation in aviation, autonomous vehicles, and intelligent systems.
+                    </p>
+                    <p>    
+                        I’m a fast learner (like GPT on steroids) and genuinely excited about building technologies that make the future look like a sci-fi movie. 
+                        I thrive in teams but don’t let that fool you—I can handle things solo just as well. Teamwork is great, but sometimes you’ve got to show the world who’s boss (Haha, just kidding… or not?).
+                    </p>
+                    <p>    
+                        Now, let’s talk about the real MVPs in my life: dogs and robots. As a proud dog person, my favorite robot is none other than the Unitree Go quadruped robot—it’s a perfect combo of robotics and canine awesomeness. 
+                        When I’m not working, I’m thinking about my family back in India, who are my biggest supporters, or planning to travel the world (a bucket list item I take very seriously).
+                    </p>
+                    <p>    
+                        Photography and editing are my creative outlets, and I love capturing the beauty of the world when I’m not coding away. 
+                        As for hobbies, I enjoy playing badminton, fishing, and skating, though let’s be real—I spend more time glued to my laptop than doing any of those activities. 
+                        Life as a tech enthusiast, right? But hey, I wouldn’t have it any other way. This is me in a nutshell—a techie with a funny bone and a love for adventure.
+                    </p>
+                </div>
+        
+                <!-- Education Timeline -->
+                <h2 style="margin-top: 3rem; margin-bottom: 2rem; text-align: center;">Education</h2>
+
+                <div style="position: relative; margin: 30px auto; padding: 20px 0; max-width: 600px;">
+
+                    <div style="position: relative; padding-left: 20px; border-left: 2px solid #202222;">
+                        
+                        <!-- Master's Degree -->
+                        <div style="margin-bottom: 30px; position: relative; display: flex; align-items: center;">
+                            <div style="position: absolute; left: -8px; top: 50%; transform: translateY(-50%); background-color: #202222; width: 16px; height: 16px; border-radius: 50%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);"></div>
+                            <div style="margin-left: 10px; padding: 15px; background-color: #f8f9fa; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); width: 100%;">
+                                <h5 style="margin: 0 0 5px; font-weight: bold; color: #202222;">Master of Science in Computer Science</h5>
+                                <p style="margin: 0; font-size: 0.95rem; line-height: 1.4; color: #333;">
+                                    <strong>Mississippi State University, Starkville, Mississippi, USA</strong><br>
+                                    <strong>GPA:</strong> 4.0 (at the end of 4th Semester)<br>
+                                    <strong>Duration:</strong> Aug 2022 - Dec 2024
+                                </p>
+                            </div>
+                        </div>
+        
+                        <!-- Bachelor's Degree -->
+                        <div style="margin-bottom: 30px; position: relative; display: flex; align-items: center;">
+                            <div style="position: absolute; left: -8px; top: 50%; transform: translateY(-50%); background-color: #202222; width: 16px; height: 16px; border-radius: 50%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);"></div>
+                            <div style="margin-left: 10px; padding: 15px; background-color: #f8f9fa; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); width: 100%;">
+                                <h5 style="margin: 0 0 5px; font-weight: bold; color: #202222;">Bachelor of Engineering in Computer Science</h5>
+                                <p style="margin: 0; font-size: 0.95rem; line-height: 1.4; color: #333;">
+                                    <strong>R. M. D. Engineering College, Anna University Chennai, India</strong><br>
+                                    <strong>GPA:</strong> 4.0<br>
+                                    <strong>Duration:</strong> Sep 2018 - May 2022
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="snap-section">
+            <div class="container py-5">
+                <h2 class="text-center mb-5">Technical Skills</h2>
+        
+                <!-- Programming Languages and Web Technologies -->
+                <h4 class="mt-4">Programming Languages and Web Technologies</h4>
+                <div class="skills-subsection">
+                    <div class="row skills-grid">
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-code"></i>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-code"></i>
+                                <span>C</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-code"></i>
+                                <span>C++</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-code"></i>
+                                <span>Java</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-robot"></i>
+                                <span>ROS1 & 2</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-database"></i>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- AI/ML -->
+                <h4 class="mt-4">AI/ML</h4>
+                <div class="skills-subsection">
+                    <div class="row skills-grid">
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-brain"></i>
+                                <span>TensorFlow</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-brain"></i>
+                                <span>PyTorch</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-memory"></i>
+                                <span>CUDA</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>CNNs</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-network-wired"></i>
+                                <span>RNNs</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-random"></i>
+                                <span>Transforms</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-brain"></i>
+                                <span>LLMs</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Linear Regression</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Logistic Regression</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-layer-group"></i>
+                                <span>Classification models</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-layer-group"></i>
+                                <span>Clustering models</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-cube"></i>
+                                <span>Unsupervised Learning</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-cube"></i>
+                                <span>Supervised Learning</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-robot"></i>
+                                <span>Reinforcement Learning</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-atom"></i>
+                                <span>Self-Supervised learning</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Forecasting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Data Science Tools -->
+                <h4 class="mt-4">Data Science Tools</h4>
+                <div class="skills-subsection">
+                    <div class="row skills-grid">
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-database"></i>
+                                <span>Pandas</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-database"></i>
+                                <span>NumPy</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Matplotlib</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>Seaborn</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Tableau</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-memory"></i>
+                                <span>CuPy</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-memory"></i>
+                                <span>CuDF</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Statistical Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Development Tools and OS -->
+                <h4 class="mt-4">Development Tools & OS</h4>
+                <div class="skills-subsection">
+                    <div class="row skills-grid">
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-code"></i>
+                                <span>VS Code</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-code-branch"></i>
+                                <span>Git</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-code"></i>
+                                <span>Jupyter</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-server"></i>
+                                <span>Kubernetes</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-docker"></i>
+                                <span>Docker</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-code"></i>
+                                <span>Colab</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fab fa-apple"></i>
+                                <span>MacOS</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fab fa-ubuntu"></i>
+                                <span>Ubuntu</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fab fa-windows"></i>
+                                <span>Windows</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fab fa-linux"></i>
+                                <span>Linux</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Others -->
+                <h4 class="mt-4">Others</h4>
+                <div class="skills-subsection">
+                    <div class="row skills-grid">
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-camera"></i>
+                                <span>LiDAR & Camera Processing</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-cloud"></i>
+                                <span>AWS</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-cloud"></i>
+                                <span>Azure</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-cloud"></i>
+                                <span>GCP</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-cloud"></i>
+                                <span>Cloud Computing & Services</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Parllel Computing</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-microchip"></i>
+                                <span>Computer Architecture</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-2">
+                            <div class="skill-box">
+                                <i class="fas fa-robot"></i>
+                                <span>Robotics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="snap-section">
+            <div class="container py-5">
+                <h2 class="text-center">Experience</h2>
+                <div class="mb-4">
+                    <h4>Graduate Teaching Assistant 2</h4>
+                    <h5>Mississippi State University </h5>
+                    <p><a href="https://www.datascience.msstate.edu/directory/mg1599" target="_blank">Profile</a></p>
+                    <h6>Data Wrangling Lab  .  Data Science Literacy  .  Fundamentals of Data Acquisition  .  Statistical Inference Lab  .  Data Visualization  .  AI Lab  .  Quantum Computing Lab</h6>
+                    <ul>
+                        <li>Guided students in cleaning and managing real-world structured/unstructured data for ML Analysis pipelines.</li>
+                        <li>Developed and delivered class presentations on DS fundamentals, data acquisition, EDA, and practical DS solutions.</li>
+                        <li>Helped students with advanced statistical data analysis and predictive modeling, improving data analytical skills.</li>
+                        <li>Assisted in data wrangling for visualization projects and creating effective visuals for data analysis using Tableau.</li>
+                        <li>Guided students to use Deep Learning/Machine Learning algorithms (TensorFlow, scikit-learn, and Keras) for practical applications, including NLP, Computer Vision, classification, clustering, regression, and Transformers.</li>
+                        <li>Helped students utilize AWS Cloud services and High-Performance Computing Clusters for ML data analysis tasks.</li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h4>Research Intern</h4>
+                    <h5>C Spire</h5>
+                    <ul>
+                        <li>Conducted research and authored 2 white papers on IP addressing & 5G Private Networks (NPNs).</li>
+                        <li>Collaborated with senior network architects and vendors to analyze the impacts of next-gen network technologies on Non-Public Networks and future IP addressing infrastructure.</li>
+                        <li>Presented findings to support strategic decision-making and planning innovation in next-gen networks.</li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h4>Research Intern</h4>
+                    <h5>NEC Corporation India Pvt. Ltd.</h5>
+                    <ul>
+                        <li>Analyzed ARM processors’ performance for supercomputers, 5G solutions, telecom tasks, and end-to-end optimization tasks.</li>
+                        <li>Prepared 3 analysis reports comparing ARM to X86 processors, presenting real-time metrics along with various ARM ecosystem products that garnered significant interest from NEC America.</li>
+                        <li>Assisted with and learned the utilization of CPU Processors in telecom components like UE, EPC, and ENB, and analyzed the differences in the shift from traditional RAN to Open RAN in RU, DU, and CU.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="snap-section">
+            <div class="container py-5">
+                <h2 class="text-center">Projects</h2>
+
+                <!-- Graduate Projects -->
+                <h4 class="mt-4">Graduate Projects</h4>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 mb-4 d-flex">
+                        <div class="project-card border p-3 rounded shadow-sm w-100">
+                            <h5>Enhancing Off-Road 3D Semantic Segmentation for Traversability Estimation for Autonomous Vehicles using LiDAR-Camera Data Fusion using KPConv model (Nov 2024)</h5>
+                            <p>
+                                Early fusion technique was applied to the Rellis3D dataset. This approach demonstrated improved mean Intersection over Union (mIoU) results when comparing LiDAR-only data to the fused LiDAR and camera data. 
+                                Notably, the fusion method achieved enhanced segmentation accuracy in distinguishing ground surfaces, particularly between mud and grass classes. 
+                                Which in turn improves the traversability estimation of ground robots/autonomous vehicles.
+                            </p>
+                            <a href="https://github.com/MonikaJayakumar-nj/Off-Road-3D-Semantic-Segmentation-using-LiDAR-Camera-Data-Fusion" target="_blank" class="btn btn-primary btn-sm mb-3">GitHub</a>
+                            <img src="img_video/Grad_Proj1(1).png" alt="Enhancing Off-Road 3D Semantic Segmentation" class="img-fluid rounded mb-3">
+                            <img src="img_video/Grad_Proj1(2).png" alt="Enhancing Off-Road 3D Semantic Segmentation" class="img-fluid rounded mb-3">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4 d-flex">
+                        <div class="project-card border p-3 rounded shadow-sm w-100">
+                            <h5>Space Shooter - DQN vs PPO Reinforcement Learning Policy Models (Oct 2023)</h5>
+                            <p>
+                                In a custom space shooter game environment, two reinforcement learning algorithms—Deep Q-Network (DQN) and Proximal Policy Optimization (PPO)—were employed to train the agent. 
+                                The game features a spaceship navigating to avoid and shoot enemies, with episodes ending upon collision. 
+                                After training, PPO achieved a maximum score of 175 and an average score of 24.831 over 1,000 episodes, outperforming DQN and a random model. 
+                                This indicates that PPO is more effective for this game scenario.
+                            </p>
+                            <video controls class="img-fluid rounded mb-3">
+                                <source src="img_video/AI_Class_Project_Video(1).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> 
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="project-card border p-3 rounded shadow-sm w-100">
+                            <h5>Navigation of Turtlebot3 with Hand Gesture Control & Obstacle Avoidance (Dec 2023)</h5>
+                            <p>
+                                This project integrates LIDAR-based obstacle avoidance with hand gesture navigation for the TurtleBot3 using ROS2 Noetic. 
+                                The system processes LIDAR data to detect obstacles and determine safe movement directions. 
+                                Simultaneously, it employs MediaPipe to recognize hand gestures via a PC camera, translating them into navigation commands. 
+                                This dual approach enables the TurtleBot3 to navigate autonomously while responding to user gestures.
+                            </p>
+                            <a href="https://github.com/MonikaJayakumar-nj/Turtlebot3-Navigation-with-Hand-Gesture-Control-Obstacle-Avoidance" target="_blank" class="btn btn-primary btn-sm mb-3">GitHub</a>
+                            <video controls class="img-fluid rounded mb-3">
+                                <source src="img_video/AI_Robotics_Project_Video(2).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> 
+                            <video controls class="img-fluid rounded mb-3">
+                                <source src="img_video/AI_Robotics_Project_Video(1).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> 
+                            <video controls class="img-fluid rounded mb-3">
+                                <source src="img_video/AI_Robotics_Project_Video(3).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="project-card border p-3 rounded shadow-sm w-100">                   
+                            <h5>Directed Individual Study (Dec 2024)</h5>
+                            <p>
+                                This project involves converting a New Holland TC33D tractor into an autonomous vehicle. The transformation includes integrating sensors such as LiDAR, IMU, and an OAK-D camera for object detection. 
+                                A Real-Time Kinematic (RTK) positioning system is employed for precise navigation. 
+                                The entire system is controlled using ROS2 Humble, with a Jetson Orin computer handling data processing and control tasks. 
+                                Electronic circuits are designed to interface with components like stepper motors, servo motors, linear actuators, and motor drivers. 
+                                A PID controller is implemented to optimize system performance. 
+                                Additionally, a simulation of the tractor model is created using the Ignition Gazebo simulator.
+                            </p>
+                            <a href="https://github.com/your-github-repo" target="_blank" class="btn btn-primary btn-sm  mb-3">GitHub</a>
+                            <video controls class="img-fluid rounded mb-3">
+                                <source src="img_video/AAI_Tractor_Video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> 
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Undergraduate Projects -->
+                <h4 class="mt-5">Undergraduate Projects</h4>
+                <div class="row">
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="project-card border p-3 rounded shadow-sm w-100">
+                            <h5>"Buddy" Personal Assistant (Jun 2021)</h5>
+                            <p>
+                                A rudimentary version of a personal assistant using multiple Python libraries that plays YouTube videos, performs web searches, tells jokes, , tells time and date, sends scheduled WhatsApp messages, and provides Wikipedia information.
+                            </p>
+                            <a href="https://github.com/MonikaJayakumar-nj/PersonalAssistant" target="_blank" class="btn btn-primary btn-sm mb-3">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="project-card border p-3 rounded shadow-sm w-100">
+                            <h5>Gender and Age Detection (Apr 2021)</h5>
+                            <p>
+                                Achieved upto 95% accuracy using OpenCV's Deep Neural Network model to detect faces and predict age and gender from images, videos, or webcam feeds. 
+                                It employs pre-trained models for face detection, gender classification, and age estimation. 
+                                Detected faces are annotated with predicted gender (Male/Female) and age group (e.g., 25-32), with confidence scores displayed. 
+                                The system supports real-time processing and saves the results for further use, making it suitable for applications in analytics, security, and personalization.
+                            </p>
+                            <a href="https://github.com/MonikaJayakumar-nj/Age-and-Gender-detection" target="_blank" class="btn btn-primary btn-sm mb-3">GitHub</a>
+                            <video controls class="img-fluid rounded mb-3">
+                                <source src="img_video/Undergrad_Mini_Proj(1).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> 
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="project-card border p-3 rounded shadow-sm w-100">
+                            <h5>Live Stock Prediction Analysis (Apr 2022)</h5>
+                            <p>
+                                This project involves time series analysis and forecasting of Oracle and Apple stock data. It examines stock trends, seasonality, and changes over time using statistical techniques like resampling, normalization, rolling statistics, and decomposition. 
+                                Predictive models, including ARIMA, SARIMA, and Dynamic Factor Models, are applied to forecast stock prices and volumes. 
+                                Among the models, the <b>Dynamic Factor Model</b> achieved the best accuracy for Oracle volume prediction with the lowest RMSE because of its ability to account for multivariate dependencies and shared patterns across multiple time series, effectively capturing latent factors influencing the data, followed by SARIMA. 
+                                This makes it particularly suitable for complex datasets with intertwined variables and structural relationships. 
+                                SARIMA is particularly well-suited for datasets with strong seasonal patterns, providing better results in handling such complexities. 
+                                In contrast, ARIMA and ARMA struggled with seasonal and multivariate data, highlighting their limitations in addressing these patterns effectively. 
+                                The project emphasizes visualization using Matplotlib and Plotly, providing actionable insights into stock performance.
+                            </p>
+                            <a href="https://github.com/MonikaJayakumar-nj/Live-Stock-Prediction-using-Live-Dataset" target="_blank" class="btn btn-primary btn-sm mb-3">GitHub</a>
+                            <img src="img_video/Undergrad_Final_Proj(1).png" alt="Livestock Prediction" class="img-fluid rounded mb-3">
+                            <img src="img_video/Undergrad_Final_Proj(2).png" alt="Livestock Prediction" class="img-fluid rounded mb-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Publications Section -->
+        <section id="publications" class="snap-section">
+            <div class="container py-5">
+                <h2 class="text-center">Publications</h2>
+                <div class="row">
+                    <!-- Publication 1 -->
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="publication-card border p-3 rounded shadow-sm w-100">
+                            <h5 class="text-center">
+                                LiDAR-based Traversability Estimation for Ground Robots on Construction Sites using Self-Supervised Learning
+                            </h5>
+                            <p><strong>Conference:</strong> i3ce2024 (accepted and awaiting publication)</p>
+                            <p>
+                                <strong>Details:</strong> Used the SphereFormer model for self-supervised labeling, eliminating manual annotation for path segmentation in autonomous navigation.
+                            </p>
+                            <!-- Toggle BibTeX -->
+                            <button class="btn btn-link p-0 mt-2" data-bs-toggle="collapse" data-bs-target="#bibtex1" aria-expanded="false" aria-controls="bibtex1">
+                                Show BibTeX
+                            </button>
+                            <div id="bibtex1" class="collapse mt-2">
+                                <pre class="bg-light p-3 rounded">
+        @inproceedings{yu2024lidar,
+        author    = {Yu, J. and Saha, S. and Jayakumar, M. and Gugssa, M. and Chen, J. and Wang, J.},
+        title     = {LiDAR-based Traversability Estimation for Ground Robots on Construction Sites using Self-Supervised Learning},
+        booktitle = {Proceedings of the ASCE 2024 International Conference on Computing in Civil Engineering (i3CE)},
+        location  = {Pittsburgh, PA, USA},
+        date      = {July 28-31, 2024}
+        }
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publication 2 -->
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="publication-card border p-3 rounded shadow-sm w-100">
+                            <h5 class="text-center">
+                                LiDAR-Camera Data Fusion based Traversability Estimation of Ground Robots on the Construction Sites using Self-Supervised Learning
+                            </h5>
+                            <p><strong>Conference:</strong> i3ce2025 (In Progress)</p>
+                            <p>
+                                <strong>Details:</strong> Utilized multi-modal fusion techniques to project RGB values onto the 3D point cloud through calibration procedures for traversable path segmentation in autonomous navigation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="snap-section">
+            <div class="container py-5">
+                <h2 class="text-center">Certifications</h2>
+                <div class="row">
+                    <!-- Certification 1 -->
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="certification-card border p-3 rounded shadow-sm w-100">
+                            <h5 class="text-center">CompTIA Data+</h5>
+                            <p><strong>Organization:</strong> The Computing Technology Association</p>
+                            <p><strong>Year:</strong> In-Progress</p>
+                        </div>
+                    </div>
+                    <!-- Certification 2 -->
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="certification-card border p-3 rounded shadow-sm w-100">
+                            <h5 class="text-center">Cloud Computing Basics from Coursera</h5>
+                            <p><strong>Organization:</strong> Learn Quest</p>
+                            <p><strong>Year:</strong> 2020</p>
+                        </div>
+                    </div>
+                    <!-- Certification 3 -->
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="certification-card border p-3 rounded shadow-sm w-100">
+                            <h5 class="text-center">AI for Everyon from Coursera</h5>
+                            <p><strong>Organization:</strong> deeplearning.ai</p>
+                            <p><strong>Year:</strong> 2020</p>
+                        </div>
+                    </div>
+                    <!-- Certification 4 -->
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="certification-card border p-3 rounded shadow-sm w-100">
+                            <h5 class="text-center">AWS Fundamentals: Going Cloud-Native from Coursera</h5>
+                            <p><strong>Organization:</strong> Amazon Web Services</p>
+                            <p><strong>Year:</strong> 2020</p>
+                        </div>
+                    </div>
+                    <!-- Certification 5 -->
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="certification-card border p-3 rounded shadow-sm w-100">
+                            <h5 class="text-center">Introduction to Big Data from Coursera</h5>
+                            <p><strong>Organization:</strong> UC San Diego</p>
+                            <p><strong>Year:</strong> 2020</p>
+                        </div>
+                    </div>
+                    <!-- Certification 6 -->
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="certification-card border p-3 rounded shadow-sm w-100">
+                            <h5 class="text-center">Cybersecurity and the Internet of Things from Coursera</h5>
+                            <p><strong>Organization:</strong> Kennesaw State University</p>
+                            <p><strong>Year:</strong> 2020</p>
+                        </div>
+                    </div>
+                    <!-- Certification 7 -->
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="certification-card border p-3 rounded shadow-sm w-100">
+                            <h5 class="text-center">Introduction to Packet Tracer</h5>
+                            <p><strong>Organization:</strong> Cisco Networking Academy</p>
+                            <p><strong>Year:</strong> 2020</p>
+                        </div>
+                    </div>
+                    <!-- Certification 8 -->
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="certification-card border p-3 rounded shadow-sm w-100">
+                            <h5 class="text-center">Joy of Computing Using Python from Nptel</h5>
+                            <p><strong>Organization:</strong> IIT-Madras</p>
+                            <p><strong>Year:</strong> 2019</p>
+                        </div>
+                    </div>
+                    <!-- Add more certifications as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+
+        <section id="contact" class="snap-section">
+            <div class="container text-center py-5">
+                <h2>Contact Me</h2>
+                
+                <!-- Email -->
+                <p>
+                    <a href="mailto:monikajayakumarcs@gmail.com" target="_blank">
+                        <i class="fas fa-envelope" style="font-size: 1.5rem; color: #000;"></i>
+                        <span style="margin-left: 10px;">monikajayakumarcs@gmail.com</span>
+                    </a>
+                </p>
+                
+                <!-- LinkedIn -->
+                <p>
+                    <a href="https://www.linkedin.com/in/monika-jayakumar-94774819a/" target="_blank">
+                        <i class="fab fa-linkedin" style="font-size: 1.5rem; color: #0e76a8;"></i>
+                        <span style="margin-left: 10px;">LinkedIn</span>
+                    </a>
+                </p>
+                
+                <!-- GitHub -->
+                <p>
+                    <a href="https://github.com/MonikaJayakumar-nj" target="_blank">
+                        <i class="fab fa-github" style="font-size: 1.5rem; color: #333;"></i>
+                        <span style="margin-left: 10px;">GitHub</span>
+                    </a>
+                </p>
+                
+                <!-- Location -->
+                <p>
+                    <a href="https://www.google.com/maps/place/Starkville,+MS" target="_blank">
+                        <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: #d9534f;"></i>
+                        <span style="margin-left: 10px;">Starkville, MS</span>
+                    </a>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <footer class=" snap-section bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Monika Jayakumar. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

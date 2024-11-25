@@ -604,6 +604,24 @@
                 <!-- Graduate Projects -->
                 <h4 class="mt-4">Graduate Projects</h4>
                 <div class="row">
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="project-card border p-3 rounded shadow-sm w-100">                   
+                            <h5>Directed Individual Study - Agricultural Autonomy Institute (Dec 2024)</h5>
+                            <p>
+                                This project involves converting a New Holland TC33D tractor into an autonomous vehicle. The transformation includes integrating sensors such as LiDAR, IMU, and an OAK-D camera for object detection. 
+                                A Real-Time Kinematic (RTK) positioning system is employed for precise navigation. 
+                                The entire system is controlled using ROS2 Humble, with a Jetson Orin computer handling data processing and control tasks. 
+                                Electronic circuits are designed to interface with components like stepper motors, servo motors, linear actuators, and motor drivers. 
+                                A PID controller is implemented to optimize system performance. 
+                                Additionally, a simulation of the tractor model is created using the Ignition Gazebo simulator.
+                            </p>
+                            <a href="https://github.com/your-github-repo" target="_blank" class="btn btn-primary btn-sm  mb-3">GitHub</a>
+                            <video controls class="img-fluid rounded mb-3">
+                                <source src="img_video/AAI_Tractor_Video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> 
+                        </div>
+                    </div>
                     <div class="col-lg-6 col-md-6 mb-4 d-flex">
                         <div class="project-card border p-3 rounded shadow-sm w-100">
                             <h5>Enhancing Off-Road 3D Semantic Segmentation for Traversability Estimation for Autonomous Vehicles using LiDAR-Camera Data Fusion using KPConv model (Nov 2024)</h5>
@@ -615,21 +633,6 @@
                             <a href="https://github.com/MonikaJayakumar-nj/Off-Road-3D-Semantic-Segmentation-using-LiDAR-Camera-Data-Fusion" target="_blank" class="btn btn-primary btn-sm mb-3">GitHub</a>
                             <img src="img_video/Grad_Proj1(1).png" alt="Enhancing Off-Road 3D Semantic Segmentation" class="img-fluid rounded mb-3">
                             <img src="img_video/Grad_Proj1(2).png" alt="Enhancing Off-Road 3D Semantic Segmentation" class="img-fluid rounded mb-3">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 mb-4 d-flex">
-                        <div class="project-card border p-3 rounded shadow-sm w-100">
-                            <h5>Space Shooter - DQN vs PPO Reinforcement Learning Policy Models (Oct 2023)</h5>
-                            <p>
-                                In a custom space shooter game environment, two reinforcement learning algorithms—Deep Q-Network (DQN) and Proximal Policy Optimization (PPO)—were employed to train the agent. 
-                                The game features a spaceship navigating to avoid and shoot enemies, with episodes ending upon collision. 
-                                After training, PPO achieved a maximum score of 175 and an average score of 24.831 over 1,000 episodes, outperforming DQN and a random model. 
-                                This indicates that PPO is more effective for this game scenario.
-                            </p>
-                            <video controls class="img-fluid rounded mb-3">
-                                <source src="img_video/AI_Class_Project_Video(1).mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video> 
                         </div>
                     </div>
                     <div class="col-md-6 mb-4 d-flex">
@@ -656,20 +659,17 @@
                             </video>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-4 d-flex">
-                        <div class="project-card border p-3 rounded shadow-sm w-100">                   
-                            <h5>Directed Individual Study (Dec 2024)</h5>
+                    <div class="col-lg-6 col-md-6 mb-4 d-flex">
+                        <div class="project-card border p-3 rounded shadow-sm w-100">
+                            <h5>Space Shooter - DQN vs PPO Reinforcement Learning Policy Models (Oct 2023)</h5>
                             <p>
-                                This project involves converting a New Holland TC33D tractor into an autonomous vehicle. The transformation includes integrating sensors such as LiDAR, IMU, and an OAK-D camera for object detection. 
-                                A Real-Time Kinematic (RTK) positioning system is employed for precise navigation. 
-                                The entire system is controlled using ROS2 Humble, with a Jetson Orin computer handling data processing and control tasks. 
-                                Electronic circuits are designed to interface with components like stepper motors, servo motors, linear actuators, and motor drivers. 
-                                A PID controller is implemented to optimize system performance. 
-                                Additionally, a simulation of the tractor model is created using the Ignition Gazebo simulator.
+                                In a custom space shooter game environment, two reinforcement learning algorithms—Deep Q-Network (DQN) and Proximal Policy Optimization (PPO)—were employed to train the agent. 
+                                The game features a spaceship navigating to avoid and shoot enemies, with episodes ending upon collision. 
+                                After training, PPO achieved a maximum score of 175 and an average score of 24.831 over 1,000 episodes, outperforming DQN and a random model. 
+                                This indicates that PPO is more effective for this game scenario.
                             </p>
-                            <a href="https://github.com/your-github-repo" target="_blank" class="btn btn-primary btn-sm  mb-3">GitHub</a>
                             <video controls class="img-fluid rounded mb-3">
-                                <source src="img_video/AAI_Tractor_Video.mp4" type="video/mp4">
+                                <source src="img_video/AI_Class_Project_Video(1).mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video> 
                         </div>
@@ -679,6 +679,23 @@
                 <!-- Undergraduate Projects -->
                 <h4 class="mt-5">Undergraduate Projects</h4>
                 <div class="row">
+                    <div class="col-md-6 mb-4 d-flex">
+                        <div class="project-card border p-3 rounded shadow-sm w-100">
+                            <h5>Live Stock Prediction Analysis (Apr 2022)</h5>
+                            <p>
+                                This project involves time series analysis and forecasting of Oracle and Apple stock data. It examines stock trends, seasonality, and changes over time using statistical techniques like resampling, normalization, rolling statistics, and decomposition. 
+                                Predictive models, including ARIMA, SARIMA, and Dynamic Factor Models, are applied to forecast stock prices and volumes. 
+                                Among the models, the <b>Dynamic Factor Model</b> achieved the best accuracy for Oracle volume prediction with the lowest RMSE because of its ability to account for multivariate dependencies and shared patterns across multiple time series, effectively capturing latent factors influencing the data, followed by SARIMA. 
+                                This makes it particularly suitable for complex datasets with intertwined variables and structural relationships. 
+                                SARIMA is particularly well-suited for datasets with strong seasonal patterns, providing better results in handling such complexities. 
+                                In contrast, ARIMA and ARMA struggled with seasonal and multivariate data, highlighting their limitations in addressing these patterns effectively. 
+                                The project emphasizes visualization using Matplotlib and Plotly, providing actionable insights into stock performance.
+                            </p>
+                            <a href="https://github.com/MonikaJayakumar-nj/Live-Stock-Prediction-using-Live-Dataset" target="_blank" class="btn btn-primary btn-sm mb-3">GitHub</a>
+                            <img src="img_video/Undergrad_Final_Proj(1).png" alt="Livestock Prediction" class="img-fluid rounded mb-3">
+                            <img src="img_video/Undergrad_Final_Proj(2).png" alt="Livestock Prediction" class="img-fluid rounded mb-3">
+                        </div>
+                    </div>
                     <div class="col-md-6 mb-4 d-flex">
                         <div class="project-card border p-3 rounded shadow-sm w-100">
                             <h5>"Buddy" Personal Assistant (Jun 2021)</h5>
@@ -702,23 +719,6 @@
                                 <source src="img_video/Undergrad_Mini_Proj(1).mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video> 
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4 d-flex">
-                        <div class="project-card border p-3 rounded shadow-sm w-100">
-                            <h5>Live Stock Prediction Analysis (Apr 2022)</h5>
-                            <p>
-                                This project involves time series analysis and forecasting of Oracle and Apple stock data. It examines stock trends, seasonality, and changes over time using statistical techniques like resampling, normalization, rolling statistics, and decomposition. 
-                                Predictive models, including ARIMA, SARIMA, and Dynamic Factor Models, are applied to forecast stock prices and volumes. 
-                                Among the models, the <b>Dynamic Factor Model</b> achieved the best accuracy for Oracle volume prediction with the lowest RMSE because of its ability to account for multivariate dependencies and shared patterns across multiple time series, effectively capturing latent factors influencing the data, followed by SARIMA. 
-                                This makes it particularly suitable for complex datasets with intertwined variables and structural relationships. 
-                                SARIMA is particularly well-suited for datasets with strong seasonal patterns, providing better results in handling such complexities. 
-                                In contrast, ARIMA and ARMA struggled with seasonal and multivariate data, highlighting their limitations in addressing these patterns effectively. 
-                                The project emphasizes visualization using Matplotlib and Plotly, providing actionable insights into stock performance.
-                            </p>
-                            <a href="https://github.com/MonikaJayakumar-nj/Live-Stock-Prediction-using-Live-Dataset" target="_blank" class="btn btn-primary btn-sm mb-3">GitHub</a>
-                            <img src="img_video/Undergrad_Final_Proj(1).png" alt="Livestock Prediction" class="img-fluid rounded mb-3">
-                            <img src="img_video/Undergrad_Final_Proj(2).png" alt="Livestock Prediction" class="img-fluid rounded mb-3">
                         </div>
                     </div>
                 </div>
